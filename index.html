@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>서울 전세 평균가 찾기</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="page-shell">
+      <section class="hero" aria-labelledby="page-title">
+        <p class="eyebrow">SEOUL JEONSE EXPLORER</p>
+        <h1 id="page-title">서울 전세 평균가 찾기</h1>
+        <p class="intro">자치구 / 동 / 주택 유형 선택 → 전세 거래 평균 보증금과 거래 건수 확인</p>
+      </section>
+
+      <section class="search-card" aria-label="전세가 조건 선택">
+        <div class="field">
+          <label for="district">자치구</label>
+          <select id="district" disabled>
+            <option>데이터를 불러오는 중...</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="neighborhood">동</label>
+          <select id="neighborhood" disabled>
+            <option>자치구를 먼저 선택하세요</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="housing-type">주택유형</label>
+          <select id="housing-type" disabled>
+            <option>동을 먼저 선택하세요</option>
+          </select>
+        </div>
+        <button id="search-button" type="button" disabled>평균 전세가 확인</button>
+      </section>
+
+      <section id="status" class="status" aria-live="polite">데이터를 준비하고 있어요.</section>
+
+      <section id="result" class="result-card is-hidden" aria-live="polite">
+        <p id="result-location" class="result-location"></p>
+        <p class="result-label">평균 전세가</p>
+        <p id="average-price" class="average-price"></p>
+        <div class="divider"></div>
+        <p class="transaction-text">같은 조건의 거래 <strong id="transaction-count"></strong></p>
+        <p class="caption">단위: 평균전세가 만원 · 거래건수 건</p>
+      </section>
+
+      <p class="data-note">제공된 전처리 데이터(동별·주택유형별 평균 전세가)를 사용합니다.</p>
+    </main>
+    <!-- data.js가 CSV 내용을 함께 담아 두므로 file://로 직접 열어도 작동합니다. -->
+    <script src="data.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
+
