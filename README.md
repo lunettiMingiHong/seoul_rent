@@ -5,7 +5,7 @@
 ## 구성
 
 - `index.html`: 화면 구조
-- `style.css`: 밝은 배경과 오렌지 포인트의 UI 스타일
+- `style.css`: 무채색 기반의 미니멀 UI 스타일
 - `script.js`: CSV 불러오기, 선택 메뉴 연결, 결과 표시
 - `jeonse_mean.csv`: 동별·주택유형별 평균 전세가 데이터
 - `data.js`: 로컬 파일로 직접 열어도 작동하도록 CSV를 내장한 데이터 파일
@@ -17,7 +17,7 @@
 ## GitHub에 올리기
 
 1. GitHub에서 `seoul_rent`라는 새 저장소를 만듭니다.
-2. 이 폴더 안의 파일 네 개를 모두 업로드합니다.
+2. 이 폴더 안의 파일을 모두 업로드합니다.
 3. 저장소의 기본 브랜치를 선택해 Cloudflare Pages로 가져옵니다.
 
 ## Cloudflare Pages 배포
